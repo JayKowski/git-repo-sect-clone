@@ -1,0 +1,130 @@
+/* breakpoint = 691px */
+
+/* GENERAL RULES UP HERE */
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto',
+    sans-serif;
+    font-size: 13px;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+}
+
+/* STYLES BEGIN HERE */
+
+.wrapper {
+
+}
+
+.wrapper .nav-bar {
+    display: flex;
+    align-items: center;
+    padding: 16px 32px;
+    height: 1.5rem;
+    color: #f6f0f6;
+    background-color: #161b22;
+}
+
+.wrapper .nav-bar .logo {
+    display: inline-block;
+    font-size: 1.8rem;
+    height: inherit;
+    /* height: 2.6rem; */
+}
+
+/* .wrapper .navigation {
+
+} */
+
+.navigation .input-and-links {
+    padding: 0;
+    font-weight: bold;
+}
+
+.navigation .nav-links form {
+    display: flex;
+    margin-right: 1rem;
+    align-items: center;
+    border: 1px solid #21262d;
+    border-radius: 5px;
+    padding: .1rem;
+    width: 14.5rem;
+}
+
+.navigation .nav-links form input {
+    border: none;
+    margin-right: 2.3rem;
+}
+
+.navigation .input-and-links li, .navigation .nav-sect-two li {
+    display: inline-block;
+}
+
+.navigation .input-and-links li {
+    margin-right: .5rem;
+}
+
+.navigation .nav-sect-one {
+    display: flex;
+    align-items: center;
+    flex-grow: 7;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.navigation .nav-sect-two {
+    flex-grow: 0;
+}
+
+.navigation .nav-sect-two .notif-links sup {
+    vertical-align: super;
+    font-size: .6rem;
+    position: relative;
+    right: .5rem;
+    top: -.2rem;
+}
+
+.navigation .nav-sect-two .notif-links .fas.fa-circle {
+    color: #006eed;
+}
+
+
+/* MINI-NAV STYLING */
+
+.main-section {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.main-section .mini-nav {
+
+}
+
+.mini-nav-sect {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.mini-nav-sect li {
+    display: inline-block;
+    padding: 8px 16px;
+}
