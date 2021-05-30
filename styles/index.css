@@ -109,11 +109,24 @@ p {
 
 .navigation .nav-sect-two .notif-links {
     padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 .navigation .nav-sect-two .notif-link {
-    margin-right: 7px;
+    margin-right: 9px;
     font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+.navigation .nav-sect-two .notif-link .fas.fa-plus {
+    margin-right: 6px;
+}
+
+.navigation .nav-sect-two .notif-link .small-dp {
+    border-radius: 50%;
+    margin-right: 7px;
 }
 
 .navigation .nav-sect-two .notif-links sup {
@@ -126,7 +139,7 @@ p {
 }
 
 .navigation .nav-sect-two .notif-links .far.fa-bell {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .navigation .nav-sect-two .notif-links .fas.fa-circle {
@@ -165,8 +178,28 @@ p {
 
 .mini-nav-sect li {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 9px 16px;
     font-size: .85rem;
+    height: 1.4rem;
+}
+
+.mini-nav-sect .mini-nav-link.active-tab {
+    color: #c9d1d9;
+    font-weight: 500;
+    border-bottom: 1px solid #f9826c;
+}
+
+.mini-nav-sect .mini-nav-link.active-tab .repo-count {
+    font-size: 12px;
+    border-radius: 2rem;
+    display: inline-block;
+    background-color: #30363d;
+    width: 1rem;
+    padding: 0 6px;
+    text-align: center;
+    margin-left: 3px;
+    vertical-align: middle;
+    font-weight: 300;
 }
 
 .mini-nav-links .mini-nav-icon {
@@ -175,6 +208,8 @@ p {
 
 .mini-nav-sect .mini-nav-links {
     flex-grow: 6;
+    height: 2.5rem;
+    font-size: 0px;
 }
 
 
@@ -355,7 +390,7 @@ p {
 
 .main-section .repos-sect .repository .repo-info .repo-name {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: #58a6ff;
 }
