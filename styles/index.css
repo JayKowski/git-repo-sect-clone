@@ -6,9 +6,18 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    font-family: 'Roboto',
-    sans-serif;
+    /* font-family: 'Roboto',
+    sans-serif; */
     font-size: 13px;
+    background-color: #0d1117;
+    font-family: -apple-system,
+    system-ui,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
 }
 
 html {
@@ -19,6 +28,10 @@ html {
 ul {
     list-style-type: none;
     display: inline-block;
+    margin: 0;
+}
+
+p {
     margin: 0;
 }
 
@@ -50,7 +63,7 @@ ul {
 
 .navigation .input-and-links {
     padding: 0;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .navigation .nav-links form {
@@ -59,13 +72,15 @@ ul {
     align-items: center;
     border: 1px solid #21262d;
     border-radius: 5px;
-    padding: .1rem;
+    padding: .25rem .3rem;
     width: 14.5rem;
+    background-color: #0d1117;
 }
 
 .navigation .nav-links form input {
     border: none;
     margin-right: 2.3rem;
+    background-color: #0d1117;
 }
 
 .navigation .input-and-links li, .navigation .nav-sect-two li {
@@ -73,7 +88,7 @@ ul {
 }
 
 .navigation .input-and-links li {
-    margin-right: .5rem;
+    margin-right: .6rem;
 }
 
 .navigation .nav-sect-one {
@@ -92,12 +107,26 @@ ul {
     flex-grow: 0;
 }
 
+.navigation .nav-sect-two .notif-links {
+    padding: 0;
+}
+
+.navigation .nav-sect-two .notif-link {
+    margin-right: 7px;
+    font-weight: 300;
+}
+
 .navigation .nav-sect-two .notif-links sup {
     vertical-align: super;
     font-size: .6rem;
     position: relative;
     right: .5rem;
-    top: -.2rem;
+    top: -.3rem;
+    font-weight: 300;
+}
+
+.navigation .nav-sect-two .notif-links .far.fa-bell {
+    font-size: 16px;
 }
 
 .navigation .nav-sect-two .notif-links .fas.fa-circle {
@@ -108,24 +137,30 @@ ul {
 /* MINI-NAV STYLING */
 
 
-
 .body-section .mini-nav {
     margin: 1.6rem 0 0;
     border-bottom: 1px solid #21262d;
     height: 2.5rem;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .mini-nav-sect {
     display: flex;
     width: 85%;
     margin: 0 auto;
-    font-weight: bold;
+    font-weight: 400;
+    color: #8b949e;
 }
 
 .mini-nav-sect .spacer {
     flex-grow: 4;
-    content: "";
     padding: 5px;
+    margin-right: 1.2rem;
 }
 
 .mini-nav-sect li {
@@ -147,19 +182,221 @@ ul {
 
 .main-section {
     display: flex;
-    width: 80%;
+    width: 84%;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 /* SIDE PROFILE */
 
 .main-section .side-profile {
-    width: 22.5%;
+    width: 27%;
 }
+
+.main-section .side-profile .prof-pic {
+    padding: 0 .8rem;
+    position: relative;
+    bottom: 2rem;
+}
+
+.main-section .side-profile .avatar .user-avatar{
+    border-radius: 50%;
+    width: 100%;
+    height: 10%;
+}
+
+.main-section .side-profile .user-names {
+    width: 100%;
+    height: 3rem;
+    padding: 1rem 0;
+}
+
+.main-section .side-profile .user-names .user-name {
+    font-size: 1.3rem;
+    color: #c9d1d9;
+    font-weight: 500;
+    margin: 0;
+}
+
+.main-section .side-profile .user-names .user-handle {
+    font-size: 1.2rem;
+    color: #8b949e;
+    margin: 0;
+    font-weight: 300;
+}
+
+.main-section .side-profile .unfollow-btn {
+    width: 100%;
+    text-align: center;
+}
+
+.main-section .side-profile .unfollow-btn .user-follow-btn {
+    display: block;
+    border: 1px solid #30363d;
+    background-color: #21262d;
+    color: #c9d1d9;
+    border-radius: 6px;
+    font-weight: 500;
+    padding: .3rem 1rem;
+}
+
+.main-section .side-profile .user-deets .user-description {
+    font-weight: 400;
+    color: #c9d1d9;
+    margin: 1rem 0;
+}
+
+
+.main-section .side-profile .user-deets .follows-stars {
+    padding-left: 0;
+    color: #8b949e;
+}
+
+
+
+.main-section .side-profile .user-deets .follows-stars .followership {
+    padding-left: 5px;
+}
+
+.main-section .side-profile .user-deets .follows-stars .followership .fas,
+.main-section .side-profile .user-deets .follows-stars .followership .fas {
+    color: #8b9492;
+}
+
+.main-section .side-profile .user-deets .follows-stars .followership .stats-num {
+    font-weight: bold;
+    color: #c9d1d9;
+}
+
+.main-section .side-profile .user-deets .follows-stars .followership .stats-text {
+    color: #c9d1d9;
+}
+
+.main-section .side-profile .user-deets .more-info {
+    text-align: left;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.main-section .side-profile .user-deets .more-info .info-individual {
+    margin: .4rem 0;
+}
+
+.main-section .side-profile .user-deets .more-info .far,
+.main-section .side-profile .user-deets .more-info .fas,
+.main-section .side-profile .user-deets .more-info .fab {
+    color: #8b949e;
+}
+
+.main-section .side-profile .user-deets .more-info .more-stats-text {
+    padding-left: 8px;
+    text-align: right;
+    color: #c9d1d9;
+}
+
 
 /* REPOS SECTION */
 
 .main-section .repos-sect {
-    width: 77.5%;
+    width: 73%;
+    padding: 0 1.5rem;
 }
+
+.main-section .repos-sect .find-repo {
+    display: flex;
+    padding: 1rem 0;
+    border-bottom: 1px solid #21262d;
+}
+
+.main-section .repos-sect .find-repo-form {
+    flex-grow: 9;
+    /* margin-right: 1rem; */
+    /* width: 33rem; */
+}
+
+.main-section .repos-sect .find-repo-form input {
+    background-color: #0d1117;
+    border: 1px solid #21262d;
+    border-radius: 6px;
+    width: 93%;
+    padding: 6px 12px;
+}
+
+.main-section .repos-sect .find-repo .find-repo-btns {
+    padding: 0;
+    flex-grow: 1;
+    text-align: right;
+    width: 30%;
+}
+
+.main-section .repos-sect .find-repo .find-repo-btns .find-repo-btn {
+    font-weight: 500;
+    border-radius: 6px;
+    color: #c9d1d9;
+    background-color: #21262d;
+    border: 1px solid #30363d;
+    display: inline-block;
+    padding: 5px 12px;
+}
+
+.main-section .repos-sect .find-repo .find-repo-btns .find-repo-btn .fas {
+    padding-left: .5rem;
+}
+
+.main-section .repos-sect .repository {
+    display: flex;
+    padding: 1rem 0;
+    border-bottom: 1px solid #21262d;
+}
+
+.main-section .repos-sect .repository .repo-info {
+    flex-grow: 8;
+}
+
+.main-section .repos-sect .repository .repo-info .repo-name {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #58a6ff;
+}
+
+.main-section .repos-sect .repository .repo-info .project-desc {
+    color: #8b949e;
+    margin: .5rem 0 .5rem 0;
+}
+
+.main-section .repos-sect .repository .repo-info .lang {
+    padding: 5px;
+    background-color: #006eed;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.main-section .repos-sect .repository .repo-info .more-repo-info {
+    padding: .4rem 0;
+    /* color: #c9d1d9; */
+    color: #8b949e;
+}
+
+.main-section .repos-sect .repository .repo-info .more-repo-info span {
+    margin-right: .7rem;
+}
+
+.main-section .repos-sect .repository .star-and-graph {
+    display: flex;
+}
+
+.main-section .repos-sect .repository .star-and-graph .star-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+    background-color: #21262d;
+    border-radius: 6px;
+    color: #c9d1d9;
+    height: 1rem;
+    margin-top: 12px;
+}
+
+/* .main-section .repos-sect .repository */

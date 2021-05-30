@@ -22,7 +22,7 @@
                     <div class="nav-links">
                         <form class="search-form">
                             <input type="text" class="search-bar" placeholder="Search or jump to...">
-                            <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="">
+                            <img src="https://github.githubassets.com/images/search-key-slash.svg" width=20 height=18 alt="">
                         </form>
                         <ul class="input-and-links">
                             <li class="nav-link">Pull requests</li>
@@ -61,28 +61,60 @@
             <div class="main-section">
                 <section class="side-profile">
                     <div class="prof-pic">
-                        <img src="#" alt="" class="user-avatar">
-                        <p class="user-name">User_Name</p>
-                        <p class="user-handle">UserHandle</p>
-                        <span class="user-follow-btn">Follow</span>
-                        <p>I am a user waiting for a correct description of myself, interests and current life activities</p>
-                        <div class="follows-stars">
-                            <ul class="followership"><i class="fas fa-user-friends"></i>followers</ul>
-                            <ul class="followership">following</ul>
-                            <ul class="followership"><i class="far fa-star"></i></ul>
+                        <div class="avatar">
+                            <img src="./images/prof-pic.jpeg" width=280 height=280 alt="" class="user-avatar">
                         </div>
-                        <ul class="additional-info">
-                            <li class="info-individual">auto-generate</li>
-                            <li class="info-individual">auto-generate</li>
-                            <li class="info-individual">auto-generate</li>
-                            <li class="info-individual">auto-generate</li>
-                            <li class="info-individual">auto-generate</li>
-                        </ul>
+                        <div class="user-names">
+                            <p class="user-name">User_Name</p>
+                            <p class="user-handle">UserHandle</p>
+                        </div>
+                        <div class="unfollow-btn">
+                            <span class="user-follow-btn">Follow</span>
+                        </div>
+                        <div class="user-deets">
+                            <div class="user-description">
+                                <p>I am a user waiting for a correct description of myself, interests and current life activities</p>
+                            </div>
+                            <div class="follows-stars">
+                                <span class="followership">
+                                    <i class="fas fa-user-friends"></i>
+                                    <span class="stats-num">(##)</span>
+                                    <span class="stats-text">followers</span>
+                                </span>
+                                <span class="followership">
+                                    <span class="stats-num">(##)</span>
+                                    <span class="stats-text">following</span>
+                                </span>
+                                <span class="followership">
+                                    <i class="far fa-star"></i>
+                                    <span class="stats-num">(##)</span>
+                                </span>
+                            </div>
+                            <ul class="more-info">
+                                <li class="info-individual">
+                                    <i class="far fa-building">
+                                    </i><span class="more-stats-text">auto-generate</span>
+                                </li>
+                                <li class="info-individual">
+                                    <i class="fas fa-map-marker-alt">
+                                    </i><span class="more-stats-text">auto-generate</span>
+                                </li>
+                                <li class="info-individual">
+                                    <i class="fas fa-link">
+                                    </i><span class="more-stats-text">auto-generate</span>
+                                </li>
+                                <li class="info-individual">
+                                    <i class="fab fa-twitter">
+                                    </i><span class="more-stats-text">auto-generate</span>
+                                </li>
+                                <!-- <li class="info-individual">auto-generate</li> -->
+                            </ul>
+                        </div>
                     </div>
                 </section>
                 <section class="repos-sect">
                     <div class="find-repo">
-                        <form>
+                        <form class="find-repo-form">
                             <input placeholder="Find a repository..." />
                         </form>
                         <ul class="find-repo-btns">
@@ -94,12 +126,12 @@
                     <div class="repository">
                         <div class="repo-info">
                             <p class="repo-name">Repo-Name</p>
-                            <p class="project-description">project-description</p>
+                            <p class="project-desc">project-description</p>
                             <div class="more-repo-info">
-                                <span class="main-lang">* Main-Lang</span>
+                                <span class="main-lang"><div class="lang"></div>Main-Lang</span>
                                 <span class="starred"><i class="far fa-star"></i> #num</span>
                                 <span class="forked"><i class="fas fa-code-branch"></i> #num</span>
-                                <span class="last-updated"></span>
+                                <span class="last-updated">updated (#) days ago</span>
                             </div>
                         </div>
                         <div class="star-and-graph">
@@ -109,12 +141,12 @@
                     <div class="repository">
                         <div class="repo-info">
                             <p class="repo-name">Repo-Name</p>
-                            <p class="project-description">project-description</p>
+                            <p class="project-desc">project-description</p>
                             <div class="more-repo-info">
-                                <span class="main-lang">* Main-Lang</span>
+                                <span class="main-lang"><div class="lang"></div>Main-Lang</span>
                                 <span class="starred"><i class="far fa-star"></i> #num</span>
                                 <span class="forked"><i class="fas fa-code-branch"></i> #num</span>
-                                <span class="last-updated"></span>
+                                <span class="last-updated">updated (#) days ago</span>
                             </div>
                         </div>
                         <div class="star-and-graph">
@@ -124,12 +156,12 @@
                     <div class="repository">
                         <div class="repo-info">
                             <p class="repo-name">Repo-Name</p>
-                            <p class="project-description">project-description</p>
+                            <p class="project-desc">project-description</p>
                             <div class="more-repo-info">
-                                <span class="main-lang">* Main-Lang</span>
+                                <span class="main-lang"><div class="lang"></div>Main-Lang</span>
                                 <span class="starred"><i class="far fa-star"></i> #num</span>
                                 <span class="forked"><i class="fas fa-code-branch"></i> #num</span>
-                                <span class="last-updated"></span>
+                                <span class="last-updated">updated (#) days ago</span>
                             </div>
                         </div>
                         <div class="star-and-graph">
