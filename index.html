@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" type="text/css" href="./styles/index.css">
     <title>handle(name)/ repositories</title>
 </head>
 <body>
@@ -37,8 +37,8 @@
                     <div class="notif-profile">
                         <ul class="notif-links">
                             <li class="notif-link"><i class="far fa-bell"></i><sup><i class="fas fa-circle"></i></sup></li>
-                            <li class="notif-link"><i class="fas fa-plus"></i> <i class="fas fa-caret-down"></i></li>
-                            <li class="notif-link"><img class="small-dp" width=20 height=20></img><i class="fas fa-caret-down"></i></li>
+                            <li class="notif-link hide"><i class="fas fa-plus"></i> <i class="fas fa-caret-down"></i></li>
+                            <li class="notif-link hide"><img class="small-dp" width=20 height=20></img><i class="fas fa-caret-down"></i></li>
                         </ul>
                     </div>    
                 </div>
@@ -77,35 +77,39 @@
                             <div class="follows-stars">
                                 <span class="followership">
                                     <i class="fas fa-user-friends"></i>
-                                    <span class="stats-num">(##)</span>
+                                    <span class="stats-num followers">(##)</span>
                                     <span class="stats-text">followers</span>
                                 </span>
                                 <span class="followership">
-                                    <span class="stats-num">(##)</span>
+                                    <span class="stats-num following">(##)</span>
                                     <span class="stats-text">following</span>
                                 </span>
                                 <span class="followership">
                                     <i class="far fa-star"></i>
-                                    <span class="stats-num">(##)</span>
+                                    <span class="stats-num starred">(##)</span>
                                 </span>
                             </div>
                             <ul class="more-info">
                                 <li class="info-individual">
                                     <i class="far fa-building">
-                                    </i><span class="more-stats-text">auto-generate</span>
+                                    </i><span class="more-stats-text company">auto-generate</span>
                                 </li>
                                 <li class="info-individual">
                                     <i class="fas fa-map-marker-alt">
-                                    </i><span class="more-stats-text">auto-generate</span>
+                                    </i><span class="more-stats-text location">auto-generate</span>
+                                </li>
+                                <li class="info-individual">
+                                    <i class="far fa-envelope"></i>
+                                    </i><span class="more-stats-text email">auto-generate</span>
                                 </li>
                                 <li class="info-individual">
                                     <i class="fas fa-link">
-                                    </i><span class="more-stats-text">auto-generate</span>
+                                    </i><span class="more-stats-text link">auto-generate</span>
                                 </li>
-                                <li class="info-individual">
+                                <!-- <li class="info-individual">
                                     <i class="fab fa-twitter">
-                                    </i><span class="more-stats-text">auto-generate</span>
-                                </li>
+                                    </i><span class="more-stats-text twitter">auto-generate</span>
+                                </li> -->
                                 <!-- <li class="info-individual">auto-generate</li> -->
                             </ul>
                         </div>
@@ -122,49 +126,51 @@
                             <li class="find-repo-btn">Sort <i class="fas fa-caret-down"></i></li>
                         </ul>
                     </div>
-                    <div class="repository">
-                        <div class="repo-info">
-                            <p class="repo-name">Repo-Name</p>
-                            <p class="project-desc">project-description</p>
-                            <div class="more-repo-info">
-                                <span class="main-lang"><div class="lang"></div>Main-Lang</span>
-                                <span class="starred"><i class="far fa-star"></i> #num</span>
-                                <span class="forked"><i class="fas fa-code-branch"></i> #num</span>
-                                <span class="last-updated">updated (#) days ago</span>
+                    <div class="repositories">
+                        <div class="repository">
+                            <div class="repo-info">
+                                <p class="repo-name">Repo-Name</p>
+                                <p class="project-desc">A Lifestyle Article web app where users can write on topics they care about and get them published. Built with Ruby on Rails framework.</p>
+                                <div class="more-repo-info">
+                                    <span class="main-lang"><div class="lang"></div><span>Main-Lang</span></span>
+                                    <span class="starred"><i class="far fa-star"></i><span>#num</span></span>
+                                    <span class="forked"><i class="fas fa-code-branch"></i> #num</span>
+                                    <span class="last-updated">updated (#) days ago</span>
+                                </div>
+                            </div>
+                            <div class="star-and-graph">
+                                <span class="star-btn"><i class="far fa-star"></i><span>Star</span></span>
                             </div>
                         </div>
-                        <div class="star-and-graph">
-                            <span class="star-btn"><i class="far fa-star"></i> Star</span>
-                        </div>
-                    </div>
-                    <div class="repository">
-                        <div class="repo-info">
-                            <p class="repo-name">Repo-Name</p>
-                            <p class="project-desc">project-description</p>
-                            <div class="more-repo-info">
-                                <span class="main-lang"><div class="lang"></div>Main-Lang</span>
-                                <span class="starred"><i class="far fa-star"></i> #num</span>
-                                <span class="forked"><i class="fas fa-code-branch"></i> #num</span>
-                                <span class="last-updated">updated (#) days ago</span>
+                        <div class="repository">
+                            <div class="repo-info">
+                                <p class="repo-name">Repo-Name</p>
+                                <p class="project-desc">project-description</p>
+                                <div class="more-repo-info">
+                                    <span class="main-lang"><div class="lang"></div>Main-Lang</span>
+                                    <span class="starred"><i class="far fa-star"></i> #num</span>
+                                    <span class="forked"><i class="fas fa-code-branch"></i> #num</span>
+                                    <span class="last-updated">updated (#) days ago</span>
+                                </div>
+                            </div>
+                            <div class="star-and-graph">
+                                <span class="star-btn"><i class="far fa-star"></i> Star</span>
                             </div>
                         </div>
-                        <div class="star-and-graph">
-                            <span class="star-btn"><i class="far fa-star"></i> Star</span>
-                        </div>
-                    </div>
-                    <div class="repository">
-                        <div class="repo-info">
-                            <p class="repo-name">Repo-Name</p>
-                            <p class="project-desc">project-description</p>
-                            <div class="more-repo-info">
-                                <span class="main-lang"><div class="lang"></div>Main-Lang</span>
-                                <span class="starred"><i class="far fa-star"></i> #num</span>
-                                <span class="forked"><i class="fas fa-code-branch"></i> #num</span>
-                                <span class="last-updated">updated (#) days ago</span>
+                        <div class="repository">
+                            <div class="repo-info">
+                                <p class="repo-name">Repo-Name</p>
+                                <p class="project-desc">project-description</p>
+                                <div class="more-repo-info">
+                                    <span class="main-lang"><div class="lang"></div>Main-Lang</span>
+                                    <span class="starred"><i class="far fa-star"></i> #num</span>
+                                    <span class="forked"><i class="fas fa-code-branch"></i> #num</span>
+                                    <span class="last-updated">updated (#) days ago</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="star-and-graph">
-                            <span class="star-btn"><i class="far fa-star"></i> Star</span>
+                            <div class="star-and-graph">
+                                <span class="star-btn"><i class="far fa-star"></i> Star</span>
+                            </div>
                         </div>
                     </div>
                 </section>

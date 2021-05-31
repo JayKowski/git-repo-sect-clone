@@ -11,6 +11,7 @@
   "author": "JayKowski",
   "license": "ISC",
   "dependencies": {
+    "date-fns": "^2.22.1",
     "webpack": "^5.38.1"
   },
   "devDependencies": {

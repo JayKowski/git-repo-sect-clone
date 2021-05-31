@@ -35,11 +35,15 @@ p {
     margin: 0;
 }
 
+input {
+    color: #f6f0f6;
+}
+
 /* STYLES BEGIN HERE */
 
-.wrapper {
+/* .wrapper {
 
-}
+} */
 
 .wrapper .nav-bar {
     display: flex;
@@ -81,6 +85,7 @@ p {
     border: none;
     margin-right: 2.3rem;
     background-color: #0d1117;
+    outline: none;
 }
 
 .navigation .input-and-links li, .navigation .nav-sect-two li {
@@ -134,7 +139,7 @@ p {
     font-size: .6rem;
     position: relative;
     right: .5rem;
-    top: -.3rem;
+    top: -.5rem;
     font-weight: 300;
 }
 
@@ -194,12 +199,12 @@ p {
     border-radius: 2rem;
     display: inline-block;
     background-color: #30363d;
-    width: 1rem;
+    /* width: 1rem; */
     padding: 0 6px;
     text-align: center;
     margin-left: 3px;
     vertical-align: middle;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .mini-nav-links .mini-nav-icon {
@@ -386,6 +391,7 @@ p {
 
 .main-section .repos-sect .repository .repo-info {
     flex-grow: 8;
+    width: 86%;
 }
 
 .main-section .repos-sect .repository .repo-info .repo-name {
@@ -398,6 +404,7 @@ p {
 .main-section .repos-sect .repository .repo-info .project-desc {
     color: #8b949e;
     margin: .5rem 0 .5rem 0;
+    max-width: 81%;
 }
 
 .main-section .repos-sect .repository .repo-info .lang {
@@ -434,4 +441,77 @@ p {
     margin-top: 12px;
 }
 
-/* .main-section .repos-sect .repository */
+/********* MEDIA QUERIES ************/
+
+@media only screen and (max-width: 1282px) {
+    .main-section {
+        /* display: flex; */
+        width: 95%;
+    }
+
+    .main-section .repos-sect .find-repo-form {
+        /* width: 100%; */
+        /* flex-grow: 5; */
+    }
+
+    .main-section .repos-sect .find-repo {
+        display: block;
+        /* width: 100%; */
+    }
+
+    .main-section .repos-sect .find-repo .find-repo-btns {
+        /* display: flex; */
+        /* height: rem; */
+        width: 100%;
+        margin: 5px 10px 0 0;
+        text-align: left;
+    }
+
+    .main-section .repos-sect .find-repo .find-repo-btn {
+        /* width: 2rem; */
+    }
+    /* .main-section .repos-sect .find-repo-form {
+        width: 100%;
+    } */
+}
+
+@media only screen and ( max-width: 692px ) {
+    .navigation .input-and-links {
+        display: none;
+    }
+
+    .navigation .nav-links form {
+        display: none;
+    }
+
+    .navigation .nav-sect-two .notif-link.hide {
+        display: none;
+    }
+
+    .body-section .mini-nav {
+        display: none;
+    }
+
+    .main-section {
+        display: block;
+        width: 97%;
+    }
+
+    .main-section .repos-sect {
+        width: 99%;
+        padding: 0;
+    }
+
+    .main-section .side-profile {
+        width: 100%;
+        display: block;
+    }
+
+    .main-section .side-profile .prof-pic {
+        bottom: 0rem;
+    }
+
+    .main-section .side-profile .avatar {
+        width: 29%;
+    }
+}
