@@ -7,6 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   watch: true,
+  mode: 'production',
   module: {
     rules: [
       {
