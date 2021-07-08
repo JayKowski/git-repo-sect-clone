@@ -1,2 +1,4 @@
 node_modules
 report.20210530.195833.1648.0.001
+# Local Netlify folder
+.netlify
