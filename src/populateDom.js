@@ -35,13 +35,8 @@ function populateDOM(gitData) {
     gitData.company != null ? company.innerText = `${gitData.company}`: company.parentElement.style.display = "none";
     gitData.location != null ? location.innerText = `${gitData.location}` : location.parentElement.style.display = "none";
     gitData.email.length != 0 && gitData.email != null ? email.innerText = `${gitData.email}` : email.parentElement.style.display = "none";
-    gitData.websiteUrl != null ? webUrl.innerText = `${gitData.websiteUrl}` : webUrl.parentElement.style.display = "none"
-    // webUrl.innerText = `${gitData.websiteUrl}`;
-    // location.innerText = `${gitData.location}`;
+    gitData.websiteUrl != null ? webUrl.innerText = `${gitData.websiteUrl}` : webUrl.parentElement.style.display = "none";
 
-    //appendRepo(repName, projDesc, mainLangColor, mainLang, sGazers, forks, lastUpdate)
-    //REPO data 
-    
     
     gitData.repositories.nodes.map( n => {
         let repoName = n.name;
@@ -49,20 +44,14 @@ function populateDOM(gitData) {
         let langColor = n.languages.edges.length >= 1 ? n.languages.edges[0].node.color : '';
         let langName = n.languages.edges.length >= 1 ? n.languages.edges[0].node.name : '';
         let gazers = n.stargazerCount;
-        // let fork = n.isFork;
         let forkCount = n.forkCount;
         let updatedLast = n.updatedAt;
         let parsedDate = dateFormatter(updatedLast);
         let wholeRepo = appendRepo(repoName, repoDesc, langColor, langName, gazers, forkCount, parsedDate);
 
         repositories.appendChild(wholeRepo);
-        // console.log(wholeRepo, 'appended');
-        // console.log(n.languages.edges.length >= 1 ? n.languages.edges[0].node.color : 'color')
-        // console.log(n.languages.edges.length);
-        // console.log(Array.isArray(n.languages.edges) ? n.languages.edges[0].node.color : n.languages.edges)
     })
 
-    // gitData.repositories.nodes
     console.log(gitData.repositories.nodes[4]);
 }
 
