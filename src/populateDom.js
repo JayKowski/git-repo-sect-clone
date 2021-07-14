@@ -37,22 +37,31 @@ function populateDOM(gitData) {
     gitData.email.length != 0 && gitData.email != null ? email.innerText = `${gitData.email}` : email.parentElement.style.display = "none";
     gitData.websiteUrl != null ? webUrl.innerText = `${gitData.websiteUrl}` : webUrl.parentElement.style.display = "none";
 
+    //CLEAR REPOS SECTION ON EVERY SUBSEQUENT SEARCH
+    repositories.innerHTML = " ";
+
+    if(gitData.repositories.nodes.length > 0){
+        gitData.repositories.nodes.map( n => {
+            let repoName = n.name;
+            let repoDesc = n.description;
+            let langColor = n.languages.edges.length >= 1 ? n.languages.edges[0].node.color : '';
+            let langName = n.languages.edges.length >= 1 ? n.languages.edges[0].node.name : '';
+            let gazers = n.stargazerCount;
+            let forkCount = n.forkCount;
+            let updatedLast = n.updatedAt;
+            let parsedDate = dateFormatter(updatedLast);
+            let wholeRepo = appendRepo(repoName, repoDesc, langColor, langName, gazers, forkCount, parsedDate);
     
-    gitData.repositories.nodes.map( n => {
-        let repoName = n.name;
-        let repoDesc = n.description;
-        let langColor = n.languages.edges.length >= 1 ? n.languages.edges[0].node.color : '';
-        let langName = n.languages.edges.length >= 1 ? n.languages.edges[0].node.name : '';
-        let gazers = n.stargazerCount;
-        let forkCount = n.forkCount;
-        let updatedLast = n.updatedAt;
-        let parsedDate = dateFormatter(updatedLast);
-        let wholeRepo = appendRepo(repoName, repoDesc, langColor, langName, gazers, forkCount, parsedDate);
-
-        repositories.appendChild(wholeRepo);
-    })
-
-    console.log(gitData.repositories.nodes[4]);
+            repositories.appendChild(wholeRepo);
+        });
+    } else {
+        let paragraph = document.createElement('P');
+        paragraph.textContent = "No repos found for this user";
+        paragraph.style.textAlign = "center";
+        paragraph.style.color = "#8b949e"
+        paragraph.style.marginTop = "2rem"
+        repositories.appendChild(paragraph);
+    }
 }
 
 

@@ -3,7 +3,7 @@ import populateDOM from './populateDom';
 
 async function getData() {
     let searchTerm;
-    const accessToken = "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"
+    const accessToken = "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"
     const form = document.querySelector('.search-form');
     form.addEventListener('submit', e => {
         e.preventDefault();
@@ -26,7 +26,7 @@ async function getData() {
             populateDOM(res.data.user);
         })
         .catch(err => {
-            console.log(err)
+            alert(err)
         })
     });
 }

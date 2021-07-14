@@ -7,7 +7,6 @@ function respnosive(nav, parElement) {
     const reposSect = document.querySelector('.repos-sect');
     const bodySectChildren = bodySect.children
     if (window.matchMedia("(max-width: 692px)").matches) {
-        console.log("responsive")
         bodySect.prepend(miniNav);
     } else {
 
